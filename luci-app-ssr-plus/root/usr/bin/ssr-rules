@@ -157,7 +157,7 @@ fw_rule() {
 	$IPT -A SS_SPEC_WAN_FW -d 127.0.0.0/8 -j RETURN
 	$IPT -A SS_SPEC_WAN_FW -d 169.254.0.0/16 -j RETURN
 	$IPT -A SS_SPEC_WAN_FW -d 172.16.0.0/12 -j RETURN
-	$IPT -A SS_SPEC_WAN_FW -d 192.168.0.0/16 -j RETURN
+#	$IPT -A SS_SPEC_WAN_FW -d 192.168.0.0/16 -j RETURN
 	$IPT -A SS_SPEC_WAN_FW -d 224.0.0.0/4 -j RETURN
 	$IPT -A SS_SPEC_WAN_FW -d 240.0.0.0/4 -j RETURN
 	$IPT -A SS_SPEC_WAN_FW -p tcp $PROXY_PORTS -j REDIRECT --to-ports $local_port 2>/dev/null || {
@@ -226,7 +226,7 @@ tp_rule() {
 	$ipt -A SS_SPEC_TPROXY -p udp -d 127.0.0.0/8 -j RETURN
 	$ipt -A SS_SPEC_TPROXY -p udp -d 169.254.0.0/16 -j RETURN
 	$ipt -A SS_SPEC_TPROXY -p udp -d 172.16.0.0/12 -j RETURN
-	$ipt -A SS_SPEC_TPROXY -p udp -d 192.168.0.0/16 -j RETURN
+#	$ipt -A SS_SPEC_TPROXY -p udp -d 192.168.0.0/16 -j RETURN
 	$ipt -A SS_SPEC_TPROXY -p udp -d 224.0.0.0/4 -j RETURN
 	$ipt -A SS_SPEC_TPROXY -p udp -d 240.0.0.0/4 -j RETURN
 	$ipt -A SS_SPEC_TPROXY -p udp ! --dport 53 -d $SERVER -j RETURN
@@ -287,7 +287,7 @@ gen_spec_iplist() {
 		192.0.0.0/24
 		192.0.2.0/24
 		192.88.99.0/24
-		192.168.0.0/16
+#		192.168.0.0/16
 		198.18.0.0/15
 		198.51.100.0/24
 		203.0.113.0/24
