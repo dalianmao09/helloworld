@@ -51,6 +51,9 @@ local encrypt_methods_ss = {
 	"none",
 	"plain",
 	-- aead
+        "rc4",
+        "rc4-md5",
+        "chacha20",
 	"aes-128-gcm",
 	"aes-192-gcm",
 	"aes-256-gcm",
