@@ -51,9 +51,13 @@ local encrypt_methods_ss = {
 	"none",
 	"plain",
 	-- aead
+	"rc4",
+        "rc4-md5",
 	"aes-128-gcm",
 	"aes-192-gcm",
 	"aes-256-gcm",
+	"chacha20",
+	"chacha20-ietf",
 	"chacha20-ietf-poly1305",
 	"xchacha20-ietf-poly1305",
 	-- aead 2022
@@ -61,11 +65,8 @@ local encrypt_methods_ss = {
 	"2022-blake3-aes-256-gcm",
 	"2022-blake3-chacha20-poly1305"
 	--[[ stream
-	"none",
 	"plain",
 	"table",
-	"rc4",
-	"rc4-md5",
 	"aes-128-cfb",
 	"aes-192-cfb",
 	"aes-256-cfb",
@@ -77,7 +78,6 @@ local encrypt_methods_ss = {
 	"camellia-192-cfb",
 	"camellia-256-cfb",
 	"salsa20",
-	"chacha20",
 	"chacha20-ietf" ]]
 }
 
